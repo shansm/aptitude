@@ -17,7 +17,9 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 // Component styles are injected through grunt
 // injector
+@import 'addquestions/addquestions.scss';
 @import 'main/main.scss';
+@import 'questions/questions.scss';
 @import 'modal/modal.scss';
 // endinjector
 
@@ -25,4 +27,8 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 .hero-unit {
 	background-color: white;
 	color: black
+}
+
+.m-b-25 {
+	margin-bottom: 25px;
 }

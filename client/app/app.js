@@ -5,7 +5,8 @@ angular.module('aptitudeApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.utils'
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider

@@ -1,11 +1,16 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="row">
-	<div class="col-md-8">
-Search by category (i.e. JS, DS, Algo, Node, CSFund): <input type="text" ng-model="search.type">
+	<div class="col-md-8 m-b-25">
+What type of question are you looking for:
+
+
+<select ng-options="question.type as question.type for question in questions | unique: 'type'" ng-model="choice"></select>
+
+
 </div>
 
 <div class="col-md-8">
-	<div ng-repeat="entry in questions | filter:search">
+	<div ng-repeat="entry in questions | filter:choice">
 	<p>{{entry.question}}</p>
 </div>
 </div>
