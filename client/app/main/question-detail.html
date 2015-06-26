@@ -1,0 +1,51 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="row">
+	<div class="col-md-8 m-b-25">
+<h1>{{specificQuestion.question}}</h1>
+<h4>Answer:</h4>
+<p>{{specificQuestion.answer}}</p>
+
+
+<div class="row">
+	<div class="col-md-3">
+<h4>Complexity:</h4>
+<p>{{specificQuestion.complexity}}</p>
+</div>
+<div class="col-md-3">
+<h4>Status:</h4>
+<img src="assets/images/check.png" />
+</div>
+</div>
+
+
+</div>
+<div class="col-md-8 text-right">
+<h4>Submitted by:</h4>
+<img src="assets/images/{{specificQuestion.photo}}" />
+<p><a href="mailto:{{specificQuestion.authorEmail}}">{{specificQuestion.author}}</a></p>
+</div>
+
+	<div class="col-md-8" ng-repeat="tag in specificQuestion.type">
+		<div class="tag">{{ tag }}</div>
+	</div>
+
+
+<hr />
+<h1>Comments</h1>
+<div class="col-md-8" ng-repeat="comment in specificQuestion.comments">
+	<div class="alert alert-warning clearfix" role="alert">
+		<p>{{ comment.comment }}</p>
+
+		<div class="text-right">
+		<img src="assets/images/{{comment.photo}}" />
+
+
+		<p>{{ comment.author }}</p>
+		</div>
+	</div></div>
+
+
+
+
+</div>
+</div>

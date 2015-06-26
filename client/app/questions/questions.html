@@ -1,17 +1,22 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="row">
 	<div class="col-md-8 m-b-25">
-What type of question are you looking for:
+<!--What type of question are you looking for:
 
 
-<select ng-options="question.type as question.type for question in questions | unique: 'type'" ng-model="choice"></select>
-
+<select ng-options="question.type for question in questions | unique: 'type'" ng-model="choice"></select>-->
+<h1>Top Questions</h1>
 
 </div>
 
 <div class="col-md-8">
-	<div ng-repeat="entry in questions | filter:choice">
-	<p>{{entry.question}}</p>
-</div>
+	<ul class="list-group" ng-repeat="entry in allQuestions">
+	<li class="list-group-item"><a href="/question-detail/{{entry.id}}" target="_blank">{{entry.question}}</a>
+		<p>Submitted by: {{entry.author}}</p>
+	<div ng-repeat="tag in entry.type">
+		<div class="tag">{{tag}}</div>
+	</div>
+	</li>
+</ul>
 </div>
 </div>

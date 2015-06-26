@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
-    <title>Aptitude</title>
+    <title>aptitude</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -21,30 +21,7 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="aptitudeApp" ng-init="questions = questions ||
-
-    [
-      {
-        question: 'What advantage does a linked list provide over an array and vice versa. What are the disadvantages?',
-        type: 'ds'
-      },
-      {
-        question: 'What causes the worst run time complexity of quick sort occur and what is it?',
-        type: 'algo'
-      },
-      {
-        question: 'What are primitive types in JS? What can you tell me about them?',
-        type: 'js'
-      },
-      {
-        question: 'What are streams and piping in NodeJS?',
-        type: 'node'
-      },
-      {
-        question: 'What is the difference in copying by value vs. reference?',
-        type: 'csfund'
-      }
-    ]">
+  <body ng-app="aptitudeApp">
 
 
     <!--[if lt IE 7]>
@@ -93,6 +70,7 @@
           <script src="app/main/main.js"></script>
           <script src="app/questions/questions.controller.js"></script>
           <script src="app/questions/questions.js"></script>
+          <script src="app/questions/questions.service.js"></script>
           <script src="components/modal/modal.service.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
