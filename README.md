@@ -1,0 +1,1 @@
+Hackathon Project - idea was an internal app to create a repo of technical interview questions and associate questions to a candidate going thru the interview process. In addition, comments and feedback regarding a candidate can be submitted in the app.  
